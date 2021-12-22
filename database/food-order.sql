@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2021 at 10:05 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Dec 22, 2021 at 01:04 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,10 +39,9 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
-(1, 'Khandoker Shamimul Haque', 'shamimulhaque', 'b6fe3624b08a0f4e39f6f4c9d616090d'),
-(2, 'Md. Imran Hossan', 'imranhossan', '192e0b94eb5cdf39698fe36fb8eec8a3'),
-(4, 'Shahariar Hasan Shadhin', 'shahariarshadhin', '6c9ec075906a023e0149611882a6b5ea'),
-(19, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(19, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(20, 'Zayed Hassan', 'zayed', '827ccb0eea8a706c4c34a16891f84e7b'),
+(21, 'Redoy Rajoan', 'redoy', '827ccb0eea8a706c4c34a16891f84e7b');
 
 -- --------------------------------------------------------
 
@@ -143,10 +142,8 @@ CREATE TABLE `tbl_order` (
 --
 
 INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `status`, `customer_name`, `customer_contact`, `customer_email`, `customer_address`) VALUES
-(5, 'American Burger', '499.00', 2, '998.00', '2021-04-11 08:03:03', 'Cancelled', 'Khandoker Shamimul Haque', '01779312970', 'Khandoker15-1992@diu.edu.bd', 'Ashulia, Savar, Dhaka'),
-(6, 'Italian Pizza', '700.00', 2, '1400.00', '2021-04-11 08:04:27', 'On Delivery', 'Md. Imran Hossan', '01775348765', 'imran16-1984@diu.edu.bd', 'Ashulia, Savar, Dhaka.'),
-(7, 'Spanish Hotdog', '350.00', 2, '700.00', '2021-04-11 08:06:09', 'Delivered', 'Shahariar Hasan Shadhin', '01774758653', 'shahariar15-1960@diu.edu.bd', 'Kaptai, Rangamati, Chittagong.'),
-(8, 'Haji Biriyani', '250.00', 1, '250.00', '2021-04-11 08:07:29', 'Delivered', 'Khandoker Shamimul Haque', '01779312970', 'Khandoker15-1992@diu.edu.bd', 'Ashulia, Savar, Dhaka.');
+(9, 'Haji Biriyani', '250.00', 1, '250.00', '2021-12-22 01:01:18', 'Ordered', 'Zayed Hassan', '01812537182763', 'echo@gmail.com', 'Daffodil Khagan'),
+(10, 'Mexican Burger', '460.00', 2, '920.00', '2021-12-22 01:04:11', 'On Delivery', 'Rajoan', '0197326819283', 'john@gamil.com', 'DHAKA');
 
 --
 -- Indexes for dumped tables
@@ -184,7 +181,7 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
@@ -202,7 +199,7 @@ ALTER TABLE `tbl_food`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
